@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { useState } from "react";
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
@@ -83,6 +84,7 @@ const Register = () => {
                 {
                     success && <p className="text-green-500">{success}</p>
                 }
+                <p>Already have an account ? please <Link to='/login'>Login</Link></p>
             </div>
         </div>
     );
